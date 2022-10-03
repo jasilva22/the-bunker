@@ -1,0 +1,206 @@
+/* Colors 
+ dark green - 1C2A2C
+ footer dark - 24282B
+ 
+ font-family: 'Raleway', sans-serif;
+ font-sizes: 300, 400, 500, 900 (normal & italic)
+
+
+*/
+
+/* Universal Reset */
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+[class*=grid-], 
+[class*=grid_], 
+[class~=grid] {
+    padding: 0;
+    margin: 0;
+}
+
+[class*=col-], 
+[class*=col_], 
+[class~=col] {
+    padding: 0;
+    margin: 0;
+}
+
+/* Temporary Styles */
+/* * {
+    padding: .5rem;
+    border: 1px solid rgb(180,180,180);
+}
+
+html, 
+body {
+    border: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+    border: 1px solid rgb(187, 92, 92);
+}
+
+.bg-img {
+    background-color: rgb(241, 243, 119);
+} */
+
+/* End Temporary Styles */
+
+/* Universal Styles */
+
+.tall-50    {min-height: 50vh;}
+.tall-60    {min-height: 60vh;}
+.tall-70    {min-height: 70vh;}
+.tall-80    {min-height: 80vh;}
+.tall-90    {min-height: 90vh;}
+
+.padded     {padding: 5%;}
+.padded-lg  {padding: 10%;}
+.padded-1   {padding: 1rem;}
+.padded-2   {padding: 2rem;}
+
+.margin-b-0 {margin-bottom: 0;}
+
+.bg-featured    {background-color: #1C2A2C}
+.bg-dark        {background-color: #24282B;}
+
+.light-text {color: #fff;}
+
+.left   {text-align: left;}
+.center {text-align: center;}
+.right  {text-align: right;}
+
+/* Typography */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    /* max-width: 1200px;       *this is one option to be able to give images more room, not have the page look real squished, but it's not her fave method, feels like it looks a bit 90s and there's a better way - see below .bg-padded class
+    margin:auto; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: 8rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+.not-bold {
+    font-weight: 400;
+}
+
+.subtle {
+    opacity: .8;
+    font-size: .9rem;
+    font-style: italic;
+}
+
+p,
+li {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: .5rem;
+}
+
+p:last-child,
+li:last-child {             /*even tho we don't have any lists yet, it's common the client will want to create one when using the CMS - so its good to be thinking ahead*/
+    margin-bottom: 0;
+}
+
+a {
+    color:inherit;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4e91ad;
+}
+
+.fa-brands {
+    font-size:1.5rem;
+    padding-left: 1rem;
+}
+
+/* Footer Styles */
+
+footer h2 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+footer p {
+    margin-bottom: .2rem;
+}
+
+/* Background Images */
+
+.bg-img {
+    background-color: #24282B;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/the-bunker-1.jpg'); /*placeholder image*/
+}
+
+.bg-roof {
+    background-image: url('/images/the-bunker-5.jpg');
+}
+.bg-bed {
+    background-image: url('/images/the-bunker-1.jpg');
+}
+.bg-hall {
+    background-image: url('/images/the-bunker-3.jpg');
+}
+.bg-lobby {
+    background-image: url('/images/the-bunker-4.jpg');
+}
+.bg-bar {
+    background-image: url('/images/the-bunker-2.jpg');
+}
+.bg-sheets {
+    background-image: url('/images/the-bunker-7.jpg');
+}
+.bg-map {
+    background-image: url('/images/map-sydney.png');
+}
+
+.bg-padded {padding-bottom: 30%;}
+.social-banner {
+    background-position: 50% 17%;
+}
+
+/* Media Queries - Small Screens = max width is 48em (which in pixels is 48*16 = 768px */
+@media (max-width: 48em) {
+
+    .hide-sm { display: none;}
+
+    .flex-flip-sm {flex-direction: column-reverse;}
+
+    h1 {font-size: 4rem;}
+    footer h2 {font-size: 3rem;}
+
+    .social-banner {
+        background-image: none;
+        background-color: #4E6059;
+        min-height: 30vh;
+        border-bottom: 1px solid #1C2A2C;
+    }
+
+}
